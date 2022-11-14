@@ -6,7 +6,6 @@ import nftFive from "../assets/nft_five.png"
 import nftSix from "../assets/nft_six.png"
 import nftSeven from "../assets/nft_seven.png"
 import nftEight from "../assets/nft_eight.png"
-import {AiFillStar} from "react-icons/ai"
 
 export const nfts =[
     {

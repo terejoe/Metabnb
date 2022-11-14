@@ -1,5 +1,3 @@
-import houseIcon from "../assets/house_icon.svg"
-import metaBnb from "../assets/meta_bnb.svg";
 import Group from "../assets/Group.svg"
 
 const Navbar = () => {
