@@ -77,7 +77,7 @@ const Navbar = () => {
             </div>
 
             <>
-
+                {/* Modal Box */}
                 {showModal ? (
                 <>
                     <div className="flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
@@ -92,7 +92,7 @@ const Navbar = () => {
                                     <div className="rounded pt-2 pb-3 w-full">
                                         <button className="border border-solid border-[#CFD8DC] bg-[#F8F9FA] px-5 py-1 justify-between gap-44 rounded-xl flex flex-row">
                                             <div className="flex">
-                                                <img src={metaMask} className="" alt=""/>
+                                                <img src={metaMask} className="" alt="Metamask logo" width={30}/>
                                                 <p className="text-sm md:text-lg font-semibold text-[#000000] m-2">Metamask</p>
                                             </div>
                                             <AiOutlineRight className="fill-[#959DA6] mt-4"/>
@@ -100,7 +100,7 @@ const Navbar = () => {
 
                                         <button className="border border-solid border-[#CFD8DC] bg-[#F8F9FA] px-5 py-1 justify-between gap-36 rounded-xl flex flex-row mt-2">
                                             <div className="flex">
-                                                <img src={walletConnect} className="" alt=""/>
+                                                <img src={walletConnect} className="" alt="Connect Wallet Logo" width={30}/>
                                                 <p className="text-sm md:text-lg font-semibold text-[#000000] m-2">Wallet Connect</p>
                                             </div>
                                             <AiOutlineRight className="fill-[#959DA6] mt-4"/>
