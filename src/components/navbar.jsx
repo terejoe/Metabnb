@@ -3,11 +3,12 @@ import metaMask from "../assets/metamask.svg"
 import walletConnect from "../assets/wallet_connect.svg"
 import { useEffect, useState } from "react";
 import { AiOutlineClose, AiOutlineRight } from "react-icons/ai";
+import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [showModal, setShowModal] = useState(false);
-    // const [fade, setFade] = useState(false);
+    const [isNavOpen, setIsNavOpen] = useState(false);
 
     // Close modal when body of document is clicked
     useEffect(() => {
@@ -19,24 +20,29 @@ const Navbar = () => {
     const handleClick =(e) => {
         e.stopPropagation()
         setShowModal(true)
-        // setFade(true)
     }
 
     const handleOffClick =(e) =>{
-        setShowModal(false);
-        // setFade(false)
         e.stopPropagation()
-        
+        setShowModal(false);
+    }
+
+    const handleNavClick =() => {
+        setIsNavOpen(true)
+    }
+
+    const handleOffNavClick =() =>{
+        setIsNavOpen(false)
     }
 
     return ( 
         <div className="navbar md:p-6 p-2">
             <div className="p-4 flex justify-between w-full">
-                <div className="hidden md:flex">
+                <div className="flex">
                     <img className="" src={Group} alt="Web Logo"/>
                 </div>
 
-                <div className="mt-1">
+                <div className="mt-1 hidden md:flex">
                     <ul className="flex gap-2 md:gap-10 mt-1">
                         <Link to ="/"><li className="md:text-xl text-xs text-[#434343] font-normal">Home</li></Link>
                         <Link to ="/places"><li className="md:text-xl text-xs text-[#434343] font-normal">Place to stay</li></Link>
@@ -45,10 +51,27 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                <div className="mt-1">
+                <div className="mt-1 hidden md:flex">
                     <button className="bg-[#A02279] text-white font-normal text-sm py-2 px-4 rounded-lg" type="button"
                     onClick={handleClick}>Connect wallet</button>
                 </div>
+
+                {/*Hamburger Menu*/}
+                <div className="md:hidden z-20 cursor-pointer right-0 fixed pr-3" >
+                    { !isNavOpen ?<FaBars className="fill-[#A02279]" size={40} onClick={handleNavClick}/> :  <AiOutlineClose className="fill-[#A02279]" size={40} onClick={handleOffNavClick}/>}
+                </div>
+
+                {/*Mobile Menubar */}
+                <div className={!isNavOpen ? "hidden" : "top-0 right-0 fixed"}>
+                    <ul className="flex flex-col items-center justify-center min-h-[500px] px-20 z-20 bg-[#1D1D1E]">
+                        <Link to ="/"><li className="py-6 text-2xl text-[#A02279] font-normal">Home</li></Link>
+                        <Link to ="/places"><li className="py-6 text-2xl text-[#A02279] font-normal">Place to stay</li></Link>
+                        <Link to ="/"><li className="py-6 text-2xl text-[#A02279] font-normal">NFTs</li></Link>
+                        <Link to ="/"><li className="py-6 text-2xl text-[#A02279] font-normal">Community</li></Link>
+                    </ul>
+                </div>
+                    
+            
             </div>
 
             <>
