@@ -57,7 +57,7 @@ const Navbar = () => {
                 </div>
 
                 {/*Hamburger Menu*/}
-                <div className="md:hidden z-20 cursor-pointer right-0 fixed pr-3" >
+                <div className="md:hidden z-20 cursor-pointer right-0 pr-2" >
                     { !isNavOpen ?<FaBars className="fill-[#A02279]" size={40} onClick={handleNavClick}/> :  <AiOutlineClose className="fill-[#A02279]" size={40} onClick={handleOffNavClick}/>}
                 </div>
 
@@ -69,7 +69,7 @@ const Navbar = () => {
                         <Link to ="/"><li className="py-6 text-2xl text-[#A02279] font-normal">NFTs</li></Link>
                         <Link to ="/"><li className="py-6 text-2xl text-[#A02279] font-normal">Community</li></Link>
                         
-                        <button className="bg-[#A02279] text-white font-normal text-sm py-2 px-4 rounded-lg" type="button" onClick={handleClick}>Connect wallet</button>
+                        <button className="bg-[#A02279] text-white font-normal text-sm py-2 px-4 rounded-lg mt-2" type="button" onClick={handleClick}>Connect wallet</button>
                     </ul>
                 </div>
                     
@@ -93,7 +93,7 @@ const Navbar = () => {
                                         <button className="border border-solid border-[#CFD8DC] bg-[#F8F9FA] px-5 py-1 justify-between gap-44 rounded-xl flex flex-row">
                                             <div className="flex">
                                                 <img src={metaMask} className="" alt=""/>
-                                                <p className="text-lg font-semibold text-[#000000] m-2">Metamask</p>
+                                                <p className="text-sm md:text-lg font-semibold text-[#000000] m-2">Metamask</p>
                                             </div>
                                             <AiOutlineRight className="fill-[#959DA6] mt-4"/>
                                         </button>
@@ -101,7 +101,7 @@ const Navbar = () => {
                                         <button className="border border-solid border-[#CFD8DC] bg-[#F8F9FA] px-5 py-1 justify-between gap-36 rounded-xl flex flex-row mt-2">
                                             <div className="flex">
                                                 <img src={walletConnect} className="" alt=""/>
-                                                <p className="text-lg font-semibold text-[#000000] m-2">Wallet Connect</p>
+                                                <p className="text-sm md:text-lg font-semibold text-[#000000] m-2">Wallet Connect</p>
                                             </div>
                                             <AiOutlineRight className="fill-[#959DA6] mt-4"/>
                                         </button>
