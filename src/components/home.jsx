@@ -9,7 +9,9 @@ import {AiFillStar} from "react-icons/ai"
 import { nfts } from "./data.js"
 import frame from "../assets/frame.svg"
 
+
 const Home = () => {
+
     return ( 
         <div className="home w-full">
             <div className="md:mt-24 mt-10 grid grid-cols-2 md:gap-36 md:px-10 px-4">
@@ -48,10 +50,16 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="bg-[#A02279] md:flex justify-between mt-16 p-2 md:px-8">
+            <div className="bg-[#A02279] md:flex justify-between mt-16 p-2 px-8 hidden">
                 <img className="" src={groupOne} alt="Group Token One"/>
-                <img className="mb-1" src={groupTwo} alt="Group Token Two"/>
+                <img className="" src={groupTwo} alt="Group Token Two"/>
                 <img className="" src={groupThree} alt="Group Token Three"/>
+            </div>
+
+            <div className="bg-[#A02279] flex justify-between mt-16 p-2 px-2 md:hidden">
+                <img className="" src={groupOne} alt="Group Token One" width="100px"/>
+                <img className="" src={groupTwo} alt="Group Token Two" width="100px"/>
+                <img className="" src={groupThree} alt="Group Token Three" width="100px"/>
             </div>
 
             {/* NFT Section*/}
@@ -95,8 +103,8 @@ const Home = () => {
             </div>
 
             <div className="bg-[#A02279]">
-                <div className="m-auto p-10 md:flex justify-between">
-                    <div className="py-24 px-8">
+                <div className="m-auto p-10 md:flex md:justify-between justify-center">
+                    <div className="py-24 px-4">
                         <p className="font-bold text-white text-5xl mb-10">Metabnb NFTs</p>
                         <p className="font-normal text-lg text-white mb-12">Discover our NFT gift cards collection. Loyal <br/>
                         customers get amazing gift cards which are <br/>
@@ -106,7 +114,7 @@ const Home = () => {
                         <button className="bg-white text-[#A02279] px-6 py-2 rounded-lg text-center text-base">Learn more</button>
                     </div>
                     <div>
-                        <img className="" src={frame} alt="Mumbo Jumbo" />
+                        <img className="mb-4" src={frame} alt="Pack Collection" />
                     </div>
                 </div>
                 
