@@ -23,7 +23,7 @@ const Home = () => {
                     
 
                     <div className="md:flex mt-10 input-group flex-wrap max-w-[80%] hidden">
-                        <input type="search" className="form-control relative flex-auto block px-3.5 py-1.5 placeholder:text-sm font-normal border border-solid border-[#A3A3A3] text-[#B8B8B8] rounded-l-lg focus:outline-none p-2" placeholder="Search for location" aria-label="Search"/>
+                        <input type="search" className="form-control flex-auto block px-3.5 py-1.5 placeholder:text-sm font-normal border border-solid border-[#A3A3A3] text-[#B8B8B8] rounded-l-lg focus:outline-none p-2" placeholder="Search for location" aria-label="Search"/>
                         <button className="inline-block px-14 py-2.5 bg-[#A02279] text-white font-medium text-sm rounded-r-lg" type="button">Search</button>
                     </div>
                 </div>

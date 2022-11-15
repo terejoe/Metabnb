@@ -79,7 +79,7 @@ const Navbar = () => {
             <>
                 {/* Modal Box */}
                 {showModal ? (
-                <>
+                <div className="h-screen w-screen fixed left-0 top-0 bg-black bg-opacity-80">
                     <div className="flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
                         <div className="relative w-auto my-6 mx-auto max-w-3xl">
                             <div className="border-0 rounded-2xl shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
@@ -112,7 +112,7 @@ const Navbar = () => {
                             </div>
                         </div>
                     </div>
-                </>
+                </div>
                 ) : null}
             </>
         </div>
