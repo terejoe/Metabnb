@@ -7,8 +7,9 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [showModal, setShowModal] = useState(false);
-    const [fade, setFade] = useState(false);
+    // const [fade, setFade] = useState(false);
 
+    // Close modal when body of document is clicked
     useEffect(() => {
         document.body.addEventListener("click", () => {
             setShowModal(false)
@@ -18,12 +19,12 @@ const Navbar = () => {
     const handleClick =(e) => {
         e.stopPropagation()
         setShowModal(true)
-        setFade(true)
+        // setFade(true)
     }
 
     const handleOffClick =(e) =>{
         setShowModal(false);
-        setFade(false)
+        // setFade(false)
         e.stopPropagation()
         
     }
@@ -36,11 +37,11 @@ const Navbar = () => {
                 </div>
 
                 <div className="mt-1">
-                    <ul className="flex gap-2 md:gap-10">
-                        <Link><li className="md:text-xl text-xs text-[#434343] font-normal">Home</li></Link>
-                        <Link><li className="md:text-xl text-xs text-[#434343] font-normal">Place to stay</li></Link>
-                        <Link><li className="md:text-xl text-xs text-[#434343] font-normal">NFTs</li></Link>
-                        <Link><li className="md:text-xl text-xs text-[#434343] font-normal">Community</li></Link>
+                    <ul className="flex gap-2 md:gap-10 mt-1">
+                        <Link to ="/"><li className="md:text-xl text-xs text-[#434343] font-normal">Home</li></Link>
+                        <Link to ="/places"><li className="md:text-xl text-xs text-[#434343] font-normal">Place to stay</li></Link>
+                        <Link to ="/"><li className="md:text-xl text-xs text-[#434343] font-normal">NFTs</li></Link>
+                        <Link to ="/"><li className="md:text-xl text-xs text-[#434343] font-normal">Community</li></Link>
                     </ul>
                 </div>
 
