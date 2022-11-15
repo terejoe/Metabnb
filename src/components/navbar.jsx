@@ -68,6 +68,8 @@ const Navbar = () => {
                         <Link to ="/places"><li className="py-6 text-2xl text-[#A02279] font-normal">Place to stay</li></Link>
                         <Link to ="/"><li className="py-6 text-2xl text-[#A02279] font-normal">NFTs</li></Link>
                         <Link to ="/"><li className="py-6 text-2xl text-[#A02279] font-normal">Community</li></Link>
+                        
+                        <button className="bg-[#A02279] text-white font-normal text-sm py-2 px-4 rounded-lg" type="button" onClick={handleClick}>Connect wallet</button>
                     </ul>
                 </div>
                     
