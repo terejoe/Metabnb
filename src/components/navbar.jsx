@@ -20,6 +20,7 @@ const Navbar = () => {
     const handleClick =(e) => {
         e.stopPropagation()
         setShowModal(true)
+        setIsNavOpen(false)
     }
 
     const handleOffClick =(e) =>{
